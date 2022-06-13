@@ -1,3 +1,4 @@
 FROM gitpod/workspace-python
 SHELL ["/bin/bash", "-c"]
-RUN  ls -lah /workspace && exit 1
+RUN pyenv install -v 3.6.12  && pyenv versions
+ENV PYENV_ROOT="/workspace/.pyenv"
